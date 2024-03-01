@@ -11,18 +11,18 @@
         <section>
             <div class="form">
                 <h1>Schedule a Meeting</h1>
-                <form>
+                <form name="meeting-form" method="post">
                     <fieldset>
-                        <input type="text" id="text" name="text">
+                        <input type="text" id="meeting-name"  name="text">
                         <br>
                         <label for="date">Date</label>
                         <input type="date" id="date" name="date">
                         <label for="time">Time</label>
                         <input type="time" id="time" name="time">
                         <br>
-                        <input type="checkbox" id="checkbox" name="checkbox">
+                        <input type="checkbox" id="all-day" name="checkbox">
                         <label for="checkbox">All Day</label>
-                        <input type="checkbox" id="checkbox" name="checkbox">
+                        <input type="checkbox" id="repeat" name="checkbox">
                         <label for="checkbox">Repeat: <strong>Weekly on Friday</strong></label>
                     </fieldset>
                 </form>
@@ -35,7 +35,7 @@
                 <button>Add Guests</button>
             </div>
             <hr></hr>
-            <form id="meeeting-form">
+            <form id="event-form" method="post">
                 <fieldset>
                     <label for="location">Location:</label>
                     <input type="text" id="location" name="location">
@@ -76,7 +76,7 @@
                     <a href="#">Add notification</a>
                 </fieldset>
             </form>
-            <button type="submit" form="meeeting-form">Submit</button>
+            <button type="submit" form="meeeting-form" id="submit" onclick="submission()">Submit</button>
         </section>
     </main>
 </body>
